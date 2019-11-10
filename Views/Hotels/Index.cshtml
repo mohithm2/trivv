@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Trivago.Models.Hotel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Agent.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTACT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agent.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTACT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPTION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HOTELID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HOTELID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HOTELID })
+        </td>
+    </tr>
+}
+
+</table>

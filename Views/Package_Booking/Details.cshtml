@@ -1,0 +1,42 @@
+﻿@model Trivago.Models.Package_Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Package_Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Package.PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Package.PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOOKING_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOOKING_DATE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

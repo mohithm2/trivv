@@ -1,0 +1,50 @@
+﻿@model Trivago.Models.Hotel_Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hotel_Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hotel.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hotel.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHECK_IN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_IN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHECK_OUT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_OUT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
